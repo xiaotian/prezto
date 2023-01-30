@@ -21,7 +21,7 @@ following to 'long' (without `~` expansion) or 'full' (with `~` expansion) in
 _`${ZDOTDIR:-$HOME}/.zpreztorc`_.
 
 ```sh
-zstyle ':prezto:module:prompt' pwd-length 'short'
+zstyle ':prezto:module:prompt' pwd-length 'long'
 ```
 
 ### Display Return Value

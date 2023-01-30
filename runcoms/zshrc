@@ -11,3 +11,27 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+source ~/.zplug/init.zsh
+# Plugins
+zplug "plugins/git",   from:oh-my-zsh
+# zplug "plugins/osx",   from:oh-my-zsh
+zplug "zsh-users/zsh-autosuggestions"
+# zplug "clvv/fasd", as:command, use:fasd #, hook-load:"unalias zz"
+
+ENHANCD_DISABLE_DOT=1
+ENHANCD_DISABLE_HOME=0
+
+zplug "b4b4r07/enhancd", use:init.sh
+zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*darwin*"
+zplug "junegunn/fzf", use:"shell/*.zsh"
+zplug "Peltoche/lsd"
+# zplug "g-plane/zsh-yarn-autocompletions"
+# zplug "romkatv/powerlevel10k", as:theme, depth:1
+
+zplug load
+
+alias idf='source ~/projects/esp/esp-idf/export.sh'
+
+HISTFILE=~/.zsh_history
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
